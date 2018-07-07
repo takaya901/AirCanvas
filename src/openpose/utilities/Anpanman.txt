@@ -1,0 +1,29 @@
+const cv::Point center2{ intRound(keypoints[faceIndex])-75, intRound(keypoints[faceIndex + 1]) };
+const cv::Point center3{ intRound(keypoints[faceIndex])+75, intRound(keypoints[faceIndex + 1]) };
+const cv::Point center4{ intRound(keypoints[faceIndex]) - 30, intRound(keypoints[faceIndex + 1])-60 };
+const cv::Point center5{ intRound(keypoints[faceIndex]) + 30, intRound(keypoints[faceIndex + 1])-60 };
+
+//ì™
+cv::circle(frameR, center, radius, 252, thicknessCircle, lineType, shift);
+cv::circle(frameG, center, radius, 170, thicknessCircle, lineType, shift);
+cv::circle(frameB, center, radius,  76, thicknessCircle, lineType, shift);
+//ç∂ñ⁄
+cv::circle(frameR, center4, 10, 0, thicknessCircle, lineType, shift);
+cv::circle(frameG, center4, 10, 0, thicknessCircle, lineType, shift);
+cv::circle(frameB, center4, 10, 0, thicknessCircle, lineType, shift);
+//âEñ⁄						  
+cv::circle(frameR, center5, 10, 0, thicknessCircle, lineType, shift);
+cv::circle(frameG, center5, 10, 0, thicknessCircle, lineType, shift);
+cv::circle(frameB, center5, 10, 0, thicknessCircle, lineType, shift);
+//ï@
+cv::circle(frameR, center, 40, 255, thicknessCircle, lineType, shift);
+cv::circle(frameG, center, 40,   0, thicknessCircle, lineType, shift);
+cv::circle(frameB, center, 40,   0, thicknessCircle, lineType, shift);
+//ç∂Ç±Ç‘
+cv::circle(frameR, center2, 35, 252, thicknessCircle, lineType, shift);
+cv::circle(frameG, center2, 35, 105, thicknessCircle, lineType, shift);
+cv::circle(frameB, center2, 35,  76, thicknessCircle, lineType, shift);
+//âEÇ±Ç‘
+cv::circle(frameR, center3, 35, 252, thicknessCircle, lineType, shift);
+cv::circle(frameG, center3, 35, 105, thicknessCircle, lineType, shift);
+cv::circle(frameB, center3, 35,  76, thicknessCircle, lineType, shift);
